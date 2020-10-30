@@ -1,0 +1,37 @@
+{
+    "name": "addstock/product-lib",
+    "description": "Library for use with Laminas API Tools. The files are mapped in order to use the product on stock",
+    "license": "BSD-3-Clause",
+    "keywords": [
+        "Product",
+        "api-tools",
+        "framework"
+    ],
+    "config": {
+        "sort-packages": true
+    },
+    "extra": {
+        "branch-alias": {
+            "dev-master": "1.1-dev"
+        },
+        "laminas": {
+            "module": "productlib"
+        }
+    },
+    "require": {
+        "php": "^5.6 || ^7.0",
+        "laminas-api-tools/api-tools-configuration": "^1.0",
+        "laminas/laminas-config": "^3.1",
+        "laminas/laminas-db": "^2.8.2",
+        "laminas/laminas-hydrator": "^1.1 || ^2.0 || ^3.0",
+        "laminas/laminas-paginator": "^2.7",
+        "laminas/laminas-stdlib": "^2.7.7 || ^3.0.1",
+        "laminas/laminas-zendframework-bridge": "^1.0",
+        "ramsey/uuid": "^2.8"
+    },
+    "autoload": {
+        "psr-4": {
+            "productlib\\": "src/"
+        }
+    }
+}
