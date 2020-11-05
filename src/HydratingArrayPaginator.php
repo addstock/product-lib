@@ -1,6 +1,6 @@
 <?php
 
-namespace productlib;
+namespace Productlib;
 
 use Laminas\Hydrator\HydratorInterface;
 use Laminas\Paginator\Adapter\ArrayAdapter as ArrayPaginator;

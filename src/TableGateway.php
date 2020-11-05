@@ -1,6 +1,6 @@
 <?php
 
-namespace productlib;
+namespace Productlib;
 
 use Laminas\Db\Adapter\AdapterInterface;
 use Laminas\Db\ResultSet\HydratingResultSet;
@@ -9,9 +9,7 @@ use Laminas\Hydrator\ObjectProperty;
 use Laminas\Hydrator\ObjectPropertyHydrator;
 
 /**
- * Custom TableGateway instance for productlib
  *
- * Creates a HydratingResultSet seeded with an ObjectProperty hydrator and Entity instance.
  */
 class TableGateway extends LaminasTableGateway
 {
@@ -20,7 +18,8 @@ class TableGateway extends LaminasTableGateway
         $hydratorClass = class_exists(ObjectPropertyHydrator::class)
             ? ObjectPropertyHydrator::class
             : ObjectPropertyHydrator::class;
-        $resultSet = new HydratingResultSet(new $hydratorClass(), new Entity());
+        $resultSet = new HydratingResultSet(new $hydratorClass(), new Product());
+
         return parent::__construct($table, $adapter, $features, $resultSet);
     }
 }

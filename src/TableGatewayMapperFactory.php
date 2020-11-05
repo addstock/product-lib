@@ -1,13 +1,11 @@
 <?php
 
-namespace productlib;
+namespace Productlib;
 
 use DomainException;
 
 /**
- * Service factory for returning a productlib\TableGatewayMapper instance.
  *
- * Requires the productlib\TableGateway service be present in the service locator.
  */
 class TableGatewayMapperFactory
 {
@@ -20,6 +18,7 @@ class TableGatewayMapperFactory
                 TableGateway::class
             ));
         }
+
         return new TableGatewayMapper($services->get(TableGateway::class));
     }
 }

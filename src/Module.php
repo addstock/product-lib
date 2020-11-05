@@ -1,6 +1,6 @@
 <?php
 
-namespace productlib;
+namespace Productlib;
 
 /**
  * Laminas module

@@ -1,6 +1,6 @@
 <?php
 
-namespace productlib;
+namespace Productlib;
 
 use DomainException;
 use InvalidArgumentException;
@@ -57,6 +57,7 @@ class TableGatewayMapper implements MapperInterface
         if (0 === count($resultSet)) {
             throw new DomainException('Insert operation failed or did not result in new row', 500);
         }
+
         return $resultSet->current();
     }
 
@@ -74,6 +75,7 @@ class TableGatewayMapper implements MapperInterface
         if (0 === count($resultSet)) {
             throw new DomainException('Status message not found', 404);
         }
+
         return $resultSet->current();
     }
 
@@ -109,6 +111,7 @@ class TableGatewayMapper implements MapperInterface
         if (0 === count($resultSet)) {
             throw new DomainException('Update operation failed or result in row deletion', 500);
         }
+
         return $resultSet->current();
     }
 
